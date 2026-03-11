@@ -1,7 +1,7 @@
 name: Env demo
 on: workflow_dispatch
 env:
-  APP_DEV: "dev"
+  APP_ENV: "dev"
 
 jobs:
   env_demo:

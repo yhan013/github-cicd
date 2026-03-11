@@ -16,4 +16,4 @@ jobs:
 
 
       - name: Print env variables
-        run: printenv
+        run: echo $GITHUB_SHA

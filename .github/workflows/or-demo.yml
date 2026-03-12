@@ -1,0 +1,13 @@
+name: Or Condition Demo
+on:
+  push:
+    branches:
+      - main
+      - develop
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Hari or Javahometech
+        if: github.actor == 'Hari' || github.actor == 'yhan013'
+        run: echo "It is triggered by either Hari or yhan013"

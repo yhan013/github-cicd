@@ -1,0 +1,15 @@
+name: Nice if example
+on:
+  push:
+    branches:
+      - name
+      - develop
+      - feature/**
+
+jobs:
+  quality-checks:
+    if: startsWith(github.ref_name, 'feature')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Perform code quality
+        run: echo "Performing quality checks on code"
